@@ -18,12 +18,18 @@ public class PizzaMaster {
     private final List<Pizza> pizzaList = new ArrayList<Pizza>();
 
     public PizzaMaster() {
-        pizzaList.add(new Pizza(PizzaSize.S, PizzaKind.ミックスピザ, new BigDecimal("600")));
-        pizzaList.add(new Pizza(PizzaSize.M, PizzaKind.ミックスピザ, new BigDecimal("700")));
-        pizzaList.add(new Pizza(PizzaSize.L, PizzaKind.ミックスピザ, new BigDecimal("800")));
+        pizzaList.add(new Pizza(MenuSize.S, PizzaKind.ミックスピザ, new BigDecimal("600")));
+        pizzaList.add(new Pizza(MenuSize.M, PizzaKind.ミックスピザ, new BigDecimal("700")));
+        pizzaList.add(new Pizza(MenuSize.L, PizzaKind.ミックスピザ, new BigDecimal("800")));
+        pizzaList.add(new Pizza(MenuSize.S, PizzaKind.シーフードピザ, new BigDecimal("700")));
+        pizzaList.add(new Pizza(MenuSize.M, PizzaKind.シーフードピザ, new BigDecimal("800")));
+        pizzaList.add(new Pizza(MenuSize.L, PizzaKind.シーフードピザ, new BigDecimal("900")));
+        pizzaList.add(new Pizza(MenuSize.S, PizzaKind.マルガリータ, new BigDecimal("800")));
+        pizzaList.add(new Pizza(MenuSize.M, PizzaKind.マルガリータ, new BigDecimal("900")));
+        pizzaList.add(new Pizza(MenuSize.L, PizzaKind.マルガリータ, new BigDecimal("1000")));
     }
     
-    public Pizza getPizza(PizzaSize size, PizzaKind kind) {
+    public Pizza getPizza(MenuSize size, PizzaKind kind) {
         return pizzaList.stream()
                 .filter(pizza -> pizza.getKind().equals(kind) && pizza.getSize().equals(size))
                 .findFirst()

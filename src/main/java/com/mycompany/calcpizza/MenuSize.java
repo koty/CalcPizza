@@ -10,8 +10,8 @@ package com.mycompany.calcpizza;
  *
  * @author koty
  */
-enum PizzaKind {
-    ミックスピザ,
-    シーフードピザ,
-    マルガリータ
+enum MenuSize {
+    S,
+    M,
+    L
 }

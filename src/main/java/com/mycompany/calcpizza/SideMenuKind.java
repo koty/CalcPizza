@@ -10,8 +10,6 @@ package com.mycompany.calcpizza;
  *
  * @author koty
  */
-enum PizzaSize {
-    S,
-    M,
-    L
+public enum SideMenuKind {
+    ナゲット;
 }

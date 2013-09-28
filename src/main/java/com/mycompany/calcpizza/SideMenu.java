@@ -12,33 +12,37 @@ import java.math.BigDecimal;
  *
  * @author koty
  */
-class Pizza extends Menu{
+public class SideMenu extends Menu {
+    private final MenuKind menu;
+    private final MenuSize size;
+    private final SideMenuKind kind;
+    private final BigDecimal price;
 
-    public Pizza(MenuSize size, PizzaKind kind, BigDecimal price) {
+    public SideMenu( MenuSize size, SideMenuKind kind, BigDecimal price) {
+        this.menu = MenuKind.サイドメニュー;
         this.size = size;
         this.kind = kind;
         this.price = price;
-        this.menu = MenuKind.ピザ;
     }
-    
-    private final MenuKind menu;
-    private final MenuSize size;
-    private final PizzaKind kind;
-    private final BigDecimal price;
+
 
     public MenuKind getMenu() {
         return menu;
     }
-    
-    public BigDecimal getPrice() {
-        return price;
-    }
 
-    MenuSize getSize() {
+    public MenuSize getSize() {
         return size;
     }
 
-    PizzaKind getKind() {
+    public SideMenuKind getKind() {
         return kind;
     }
+
+   
+    public BigDecimal getPrice() {
+        return price;
+    }
+    
+    
+    
 }

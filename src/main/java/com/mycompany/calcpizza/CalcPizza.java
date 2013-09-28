@@ -3,7 +3,6 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 package com.mycompany.calcpizza;
 
 import java.math.BigDecimal;
@@ -15,20 +14,25 @@ import java.util.List;
  * @author koty
  */
 class CalcPizza {
-    private final List<Pizza> orderedPizza = new ArrayList<>();
-    private final PizzaMaster pizzaMaster = new PizzaMaster();
 
-    void orderピザ(PizzaSize pizzaSize, PizzaKind pizzaKind) {
-        orderedPizza.add(pizzaMaster.getPizza(pizzaSize, pizzaKind));
+//    private final List<Pizza> orderedPizza = new ArrayList<>();
+//    private final PizzaMaster pizzaMaster = new PizzaMaster();
+    private final List<Menu> orderedMenu = new ArrayList<>();
+
+//    void orderピザ(MenuSize pizzaSize, PizzaKind pizzaKind) {
+//        orderedPizza.add(pizzaMaster.getPizza(pizzaSize, pizzaKind));
+//    }
+    
+    void order(Menu menu) {
+        orderedMenu.add(menu);
     }
 
     BigDecimal get合計金額() {
         BigDecimal result = new BigDecimal("0");
-        for(Pizza pizza: orderedPizza) {
-            result = result.add(pizza.getPrice());
+        for (Menu menu : orderedMenu) {
+            result = result.add(menu.getPrice());
         }
         
         return result;
     }
-    
 }
